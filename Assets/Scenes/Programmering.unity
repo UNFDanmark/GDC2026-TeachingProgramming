@@ -665,6 +665,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9d4799e12fdc340ae62682dd9c3a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  rotateAction:
+    m_Name: Rotate
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2d83f2fc-b250-4a01-917c-01f34007f375
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: bec53b9b-5f26-4cd1-b271-3cbe0c1c0657
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: ffa593dc-24b6-454c-af32-d6742237e7fe
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: fb3a9dad-f1b5-4d2f-8087-cf74a08b8d4b
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    m_Flags: 0
 --- !u!23 &1521863530
 MeshRenderer:
   m_ObjectHideFlags: 0
