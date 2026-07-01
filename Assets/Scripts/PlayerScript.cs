@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public float playerSpeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
