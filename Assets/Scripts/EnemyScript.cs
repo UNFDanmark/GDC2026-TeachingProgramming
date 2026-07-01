@@ -20,5 +20,9 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         print(MitNavn);
+        
+        
+        
+        
     }
 }
