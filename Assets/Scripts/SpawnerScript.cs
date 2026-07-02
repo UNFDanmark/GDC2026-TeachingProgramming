@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class EnemySpawnerScript : MonoBehaviour
+public class SpawnerScript : MonoBehaviour
 {
-    public GameObject enemy;
+    public GameObject toSpawn;
     public float spawnCooldown;
+    public float spawnArea;
     float currentSpawnTime;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,10 +20,10 @@ public class EnemySpawnerScript : MonoBehaviour
         if (currentSpawnTime <= 0)
         {
             Vector3 spawnPosition = transform.position;
-            spawnPosition.x += Random.Range(-5f, 5f);
-            spawnPosition.z += Random.Range(-5f, 5f);
+            spawnPosition.x += Random.Range(-spawnArea, spawnArea);
+            spawnPosition.z += Random.Range(-spawnArea, spawnArea);
             currentSpawnTime = spawnCooldown;
-            Instantiate(enemy, spawnPosition, Quaternion.identity);
+            Instantiate(toSpawn, spawnPosition, Quaternion.identity);
         }
     }
 }
