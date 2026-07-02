@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 8460435989444478349}
   - component: {fileID: 8426951376681811586}
   - component: {fileID: 6194804353333085164}
-  m_Layer: 0
+  - component: {fileID: -5417068649670656751}
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,6 +168,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyVision
   sightDistance: 8
   eyes: {fileID: 3604222941490375859}
+--- !u!114 &-5417068649670656751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5764716733860150825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ec487157e009348b35adb9e2ab4eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyShootingScript
+  cooldown: 1
+  bulletSpeed: 5
+  bullet: {fileID: 3581646152927490995, guid: dc21edac9b0e1bd4eb133c6b1805ebb5, type: 3}
 --- !u!1 &8651876256638224279
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3604222941490375859}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}

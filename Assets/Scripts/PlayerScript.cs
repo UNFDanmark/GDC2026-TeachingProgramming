@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,7 @@ public class PlayerScript : MonoBehaviour
         moveAction.Enable();
     }
 
+   
 
 
     // Update is called once per frame
@@ -44,6 +46,7 @@ public class PlayerScript : MonoBehaviour
         
         //vi opdatere den rigtige hastighed
         rb.linearVelocity = newVelocity;
+        
         
     }
 }
