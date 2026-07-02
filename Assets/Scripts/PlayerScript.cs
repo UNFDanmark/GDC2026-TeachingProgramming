@@ -5,8 +5,11 @@ using UnityEngine.InputSystem;
 public class PlayerScript : MonoBehaviour
 {
     public float playerSpeed;
-    Rigidbody rb;
     public InputAction moveAction;
+    public Animator animator;
+    
+    Rigidbody rb;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,7 +49,7 @@ public class PlayerScript : MonoBehaviour
         
         //vi opdatere den rigtige hastighed
         rb.linearVelocity = newVelocity;
-        
-        
+
+        animator.SetFloat("Speed", rb.linearVelocity.magnitude);
     }
 }
