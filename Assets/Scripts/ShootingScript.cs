@@ -6,6 +6,7 @@ public class ShootingScript : MonoBehaviour
     public GameObject bullet;
     public InputAction shootingInput;
     public float cooldown;
+    public float bulletSpeed;
 
     float cooldownLeft = 0;
     
@@ -22,7 +23,9 @@ public class ShootingScript : MonoBehaviour
         if (shootingInput.WasPressedThisFrame() && cooldownLeft <= 0)
         {
             cooldownLeft = cooldown;
-            Instantiate(bullet, transform.position, Quaternion.identity);
+            GameObject bul = Instantiate(bullet, transform.position, Quaternion.identity);
+            Rigidbody bulRb = bul.GetComponent<Rigidbody>();
+            bulRb.linearVelocity = transform.forward * bulletSpeed;
         }
     }
 }
