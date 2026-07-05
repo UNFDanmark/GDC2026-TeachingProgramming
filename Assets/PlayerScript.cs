@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
 
     Rigidbody rb;
     public InputAction moveAction;
+    public InputAction rotateAction;
+    public float rotateSpeed;
 
 
     bool ErSørenSur;
@@ -33,6 +35,9 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        float rot = rotateAction.ReadValue<float>() * rotateSpeed;
+        transform.Rotate(Vector3.up, rot);
 
         Vector2 inputValue = moveAction.ReadValue<Vector2>();
         
